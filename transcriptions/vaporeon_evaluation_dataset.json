@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "dataset_name": "YouTube Vaporeon Copypasta Transcript",
+    "video_id": "-EWMgB26bmU",
+    "video_title": "Vaporeon copypasta (animated)",
+    "video_url": "https://www.youtube.com/watch?v=-EWMgB26bmU",
+    "duration_seconds": 164,
+    "uploader": "Dangoheart Animation",
+    "creation_date": "2025-01-05",
+    "extraction_method": "yt-dlp auto-generated subtitles"
+  },
+  "reference_transcript": {
+    "text": "[Music]I'm so bored when will Master come back [Music]Hey guys did you know that in terms of Male human and final Pokemon breeding Emporium is the most compatible Pokemon For humans not only are they in the Field egg group which is mostly Comprised of mammals the Vaporeon are an Average of three feet three inches tall And 63.9 pounds that means they're large Enough to be able to handle humans I love their impressive base stats for Hpe and access to acid armor you can be Roughly the one Due to their mostly water-based biology There's no doubt in my mind that in a Red Vaporeon would be incredibly wet so Wet that you could easily have sex with One for hours without getting sore they Can also learn the moves attract baby Doll eyes Captivate charm and Tailwind Along with not having fur to hide Nipples so it'd be incredibly easy for One to get you in the mood With their abilities water absorb and Hydration they can easily recover from Fatigue with enough water No other Pokemon comes close to this Level of compatibility [Music]If you pull out enough you can make your Vaporeon turn white Is literally built for human Ungodly defense stats plus High age People plus acid armor means it can take All day all shapes and sizes and still Come for more [Music] [Applause]Hey Master did you know that in terms of Male human and fish [Music]In terms of human companionship Vaporeon Is the most huggable Pokemon right no Not that Well I guess this is fine too [Music]Or was that Flareon [Music]",
+    "word_count": 270,
+    "character_count": 1494,
+    "sentence_count": 2,
+    "contains_music": true,
+    "contains_sound_effects": true
+  },
+  "evaluation_criteria": {
+    "content_type": "animated_dialogue_with_copypasta",
+    "audio_quality": "good",
+    "speech_clarity": "clear",
+    "background_noise": "minimal_music",
+    "difficulty_level": "medium",
+    "language": "english",
+    "accent": "american"
+  },
+  "test_cases": [
+    {
+      "test_id": "full_transcription",
+      "description": "Complete accurate transcription of the entire video",
+      "reference_text": "[Music]I'm so bored when will Master come back [Music]Hey guys did you know that in terms of Male human and final Pokemon breeding Emporium is the most compatible Pokemon For humans not only are they in the Field egg group which is mostly Comprised of mammals the Vaporeon are an Average of three feet three inches tall And 63.9 pounds that means they're large Enough to be able to handle humans I love their impressive base stats for Hpe and access to acid armor you can be Roughly the one Due to their mostly water-based biology There's no doubt in my mind that in a Red Vaporeon would be incredibly wet so Wet that you could easily have sex with One for hours without getting sore they Can also learn the moves attract baby Doll eyes Captivate charm and Tailwind Along with not having fur to hide Nipples so it'd be incredibly easy for One to get you in the mood With their abilities water absorb and Hydration they can easily recover from Fatigue with enough water No other Pokemon comes close to this Level of compatibility [Music]If you pull out enough you can make your Vaporeon turn white Is literally built for human Ungodly defense stats plus High age People plus acid armor means it can take All day all shapes and sizes and still Come for more [Music] [Applause]Hey Master did you know that in terms of Male human and fish [Music]In terms of human companionship Vaporeon Is the most huggable Pokemon right no Not that Well I guess this is fine too [Music]Or was that Flareon [Music]",
+      "evaluation_method": "word_error_rate",
+      "target_wer": 0.0
+    },
+    {
+      "test_id": "key_phrases",
+      "description": "Recognition of key phrases from the copypasta",
+      "key_phrases": [
+        "hey guys did you know",
+        "in terms of male human and female Pokemon breeding",
+        "Vaporeon is the most compatible Pokemon",
+        "field egg group",
+        "three feet three inches tall",
+        "63.9 pounds",
+        "water-based biology",
+        "incredibly wet",
+        "water absorb and hydration",
+        "literally built for human"
+      ],
+      "evaluation_method": "phrase_detection"
+    },
+    {
+      "test_id": "sound_effect_recognition",
+      "description": "Detection of non-speech audio elements",
+      "sound_effects": [
+        "[Music]",
+        "[Applause]"
+      ],
+      "evaluation_method": "sound_classification"
+    }
+  ]
+}

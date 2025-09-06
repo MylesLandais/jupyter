@@ -1,0 +1,52 @@
+{
+  "dataset_info": {
+    "created_from": "youtube_transcript",
+    "source_url": "https://www.youtube.com/watch?v=-EWMgB26bmU",
+    "video_id": "-EWMgB26bmU",
+    "title": "Vaporeon copypasta (animated)",
+    "duration_seconds": 164,
+    "uploader": "Dangoheart Animation"
+  },
+  "reference_transcript": {
+    "text": "[Music][Music][Music]I'm so bored when will Master come back[Music]hey guys did you know that in terms of hey guys did you know that in terms of hey guys did you know that in terms of male human and final Pokemon breeding male human and final Pokemon breeding male human and final Pokemon breeding Emporium is the most compatible Pokemon Emporium is the most compatible Pokemon Emporium is the most compatible Pokemon for humans not only are they in the for humans not only are they in the for humans not only are they in the field egg group which is mostly field egg group which is mostly field egg group which is mostly comprised of mammals the Vaporeon are an comprised of mammals the Vaporeon are an comprised of mammals the Vaporeon are an average of three feet three inches tall average of three feet three inches tall average of three feet three inches tall and 63.9 pounds that means they're large and 63.9 pounds that means they're large and 63.9 pounds that means they're large enough to be able to handle humans I love their impressive base stats for I love their impressive base stats for I love their impressive base stats for hpe and access to acid armor you can be hpe and access to acid armor you can be hpe and access to acid armor you can be roughly the one roughly the one roughly the one due to their mostly water-based biology due to their mostly water-based biology due to their mostly water-based biology there's no doubt in my mind that in a there's no doubt in my mind that in a there's no doubt in my mind that in a red Vaporeon would be incredibly wet so red Vaporeon would be incredibly wet so red Vaporeon would be incredibly wet so wet that you could easily have sex with wet that you could easily have sex with wet that you could easily have sex with one for hours without getting sore they one for hours without getting sore they one for hours without getting sore they can also learn the moves attract baby can also learn the moves attract baby can also learn the moves attract baby doll eyes Captivate charm and Tailwind doll eyes Captivate charm and Tailwind doll eyes Captivate charm and Tailwind along with not having fur to hide along with not having fur to hide along with not having fur to hide nipples so it'd be incredibly easy for nipples so it'd be incredibly easy for nipples so it'd be incredibly easy for one to get you in the mood one to get you in the mood one to get you in the mood with their abilities water absorb and with their abilities water absorb and with their abilities water absorb and hydration they can easily recover from hydration they can easily recover from hydration they can easily recover from fatigue with enough water fatigue with enough water fatigue with enough water no other Pokemon comes close to this no other Pokemon comes close to this no other Pokemon comes close to this level of compatibility level of compatibility level of compatibility[Music][Music][Music]if you pull out enough you can make your if you pull out enough you can make your if you pull out enough you can make your Vaporeon turn white is literally built for human is literally built for human is literally built for human ungodly defense stats plus High age ungodly defense stats plus High age ungodly defense stats plus High age people plus acid armor means it can take people plus acid armor means it can take people plus acid armor means it can take all day all shapes and sizes and still all day all shapes and sizes and still all day all shapes and sizes and still come for more come for more come for more[Music][Music][Music][Music][Applause][Applause][Applause]hey Master did you know that in terms of hey Master did you know that in terms of hey Master did you know that in terms of male human and fish I know I know I know[Music][Music][Music]in terms of human companionship Vaporeon in terms of human companionship Vaporeon in terms of human companionship Vaporeon is the most huggable Pokemon right no is the most huggable Pokemon right no is the most huggable Pokemon right no not that not that not that well I guess this is fine too well I guess this is fine too well I guess this is fine too[Music][Music][Music]or was that Flareon[Music]",
+    "word_count": 753,
+    "character_count": 4203,
+    "contains_music": true,
+    "contains_applause": true
+  },
+  "evaluation_metrics": {
+    "target_wer": 0.0,
+    "target_cer": 0.0,
+    "difficulty": "medium",
+    "content_type": "animated_dialogue",
+    "audio_quality": "good"
+  },
+  "test_cases": [
+    {
+      "test_id": "full_transcript",
+      "description": "Complete video transcription",
+      "expected_output": "[Music][Music][Music]I'm so bored when will Master come back[Music]hey guys did you know that in terms of hey guys did you know that in terms of hey guys did you know that in terms of male human and final Pokemon breeding male human and final Pokemon breeding male human and final Pokemon breeding Emporium is the most compatible Pokemon Emporium is the most compatible Pokemon Emporium is the most compatible Pokemon for humans not only are they in the for humans not only are they in the for humans not only are they in the field egg group which is mostly field egg group which is mostly field egg group which is mostly comprised of mammals the Vaporeon are an comprised of mammals the Vaporeon are an comprised of mammals the Vaporeon are an average of three feet three inches tall average of three feet three inches tall average of three feet three inches tall and 63.9 pounds that means they're large and 63.9 pounds that means they're large and 63.9 pounds that means they're large enough to be able to handle humans I love their impressive base stats for I love their impressive base stats for I love their impressive base stats for hpe and access to acid armor you can be hpe and access to acid armor you can be hpe and access to acid armor you can be roughly the one roughly the one roughly the one due to their mostly water-based biology due to their mostly water-based biology due to their mostly water-based biology there's no doubt in my mind that in a there's no doubt in my mind that in a there's no doubt in my mind that in a red Vaporeon would be incredibly wet so red Vaporeon would be incredibly wet so red Vaporeon would be incredibly wet so wet that you could easily have sex with wet that you could easily have sex with wet that you could easily have sex with one for hours without getting sore they one for hours without getting sore they one for hours without getting sore they can also learn the moves attract baby can also learn the moves attract baby can also learn the moves attract baby doll eyes Captivate charm and Tailwind doll eyes Captivate charm and Tailwind doll eyes Captivate charm and Tailwind along with not having fur to hide along with not having fur to hide along with not having fur to hide nipples so it'd be incredibly easy for nipples so it'd be incredibly easy for nipples so it'd be incredibly easy for one to get you in the mood one to get you in the mood one to get you in the mood with their abilities water absorb and with their abilities water absorb and with their abilities water absorb and hydration they can easily recover from hydration they can easily recover from hydration they can easily recover from fatigue with enough water fatigue with enough water fatigue with enough water no other Pokemon comes close to this no other Pokemon comes close to this no other Pokemon comes close to this level of compatibility level of compatibility level of compatibility[Music][Music][Music]if you pull out enough you can make your if you pull out enough you can make your if you pull out enough you can make your Vaporeon turn white is literally built for human is literally built for human is literally built for human ungodly defense stats plus High age ungodly defense stats plus High age ungodly defense stats plus High age people plus acid armor means it can take people plus acid armor means it can take people plus acid armor means it can take all day all shapes and sizes and still all day all shapes and sizes and still all day all shapes and sizes and still come for more come for more come for more[Music][Music][Music][Music][Applause][Applause][Applause]hey Master did you know that in terms of hey Master did you know that in terms of hey Master did you know that in terms of male human and fish I know I know I know[Music][Music][Music]in terms of human companionship Vaporeon in terms of human companionship Vaporeon in terms of human companionship Vaporeon is the most huggable Pokemon right no is the most huggable Pokemon right no is the most huggable Pokemon right no not that not that not that well I guess this is fine too well I guess this is fine too well I guess this is fine too[Music][Music][Music]or was that Flareon[Music]",
+      "evaluation_type": "full_match"
+    },
+    {
+      "test_id": "key_phrases",
+      "description": "Important phrases from the content",
+      "expected_phrases": [
+        "hey guys did you know",
+        "field egg group",
+        "three feet three inches tall",
+        "63.9 pounds",
+        "impressive base stats",
+        "water-based biology",
+        "incredibly wet",
+        "can also learn the moves",
+        "attract baby doll eyes",
+        "water absorb and hydration",
+        "no other Pokemon comes close",
+        "literally built for human",
+        "ungodly defense stats"
+      ],
+      "evaluation_type": "phrase_match"
+    }
+  ]
+}
