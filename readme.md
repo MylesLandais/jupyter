@@ -88,7 +88,7 @@
 - **Test Suite**: Comprehensive model availability and functionality testing
 
 ### Development Tools
-- **Docker Environment**: CUDA-enabled containers for GPU acceleration
+- **Docker DevContainers**: Isolated, reproducible development environment with CUDA support
 - **Secret Scanning**: Talisman pre-commit hooks for security
 - **Spec-Driven Development**: Kiro AI assistant integration for structured development
 
@@ -138,15 +138,17 @@ The primary objective is building a robust evaluation framework for "hearing" sy
 
 ## Development Environment Setup
 
-This project uses a containerized development environment with JupyterLab and PostgreSQL with pgvector extension.
+This project uses a containerized development environment with JupyterLab and PostgreSQL with pgvector extension. The containerized approach eliminates system package conflicts and ensures reproducible development across different machines and operating systems.
 
 ### Prerequisites
 
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- Install [Visual Studio Code](https://code.visualstudio.com/)
+- Install [Visual Studio Code](https://code.visualstudio.com/) (recommended)
 - Install the [VS Code Remote Development extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
-### Quick Start
+### Method 1: VS Code Dev Container (Recommended)
+
+Docker DevContainers provide the optimal development experience by avoiding conflicts with system packages and ensuring complete reproducibility across different environments. This approach offers full IDE integration with isolated dependencies:
 
 1. **Clone and setup environment**:
    ```bash
@@ -156,12 +158,30 @@ This project uses a containerized development environment with JupyterLab and Po
    # Edit .env with your actual API keys
    ```
 
-2. **Create notebooks directory**:
+2. **Open in VS Code Dev Container**:
+   - Open the project folder in VS Code
+   - VS Code will detect the dev container configuration
+   - Click "Reopen in Container" when prompted, or use Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) → **"Dev Containers: Reopen in Container"**
+   - VS Code will automatically build and start all services
+
+3. **Access services**:
+   - **Terminal**: Use VS Code's integrated terminal (already inside container)
+   - **JupyterLab**: Available at `http://localhost:8888` (token auto-configured)
+   - **PostgreSQL**: Available at `localhost:5432`
+
+### Method 2: Docker Compose (Manual)
+
+For users who prefer command-line workflow or cannot use VS Code DevContainers. While functional, this method requires more manual container management:
+
+1. **Clone and setup environment**:
    ```bash
-   mkdir -p notebooks
+   git clone <your-repo-url>
+   cd <project-directory>
+   cp .env.example .env
+   # Edit .env with your actual API keys
    ```
 
-3. **Start the development environment**:
+2. **Start the development environment**:
    ```bash
    chmod +x start.sh
    ./start.sh
@@ -172,10 +192,14 @@ This project uses a containerized development environment with JupyterLab and Po
    - Display the JupyterLab URL with access token
    - Show helpful commands for management
 
-4. **Open in VS Code** (optional):
-   - Open the project folder in VS Code
-   - Use Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-   - Select **"Dev Containers: Reopen in Container"**
+3. **Access the container shell**:
+   ```bash
+   # Get container shell for running Python scripts
+   docker compose exec jupyterlab bash
+   
+   # Or use the container ID directly
+   docker exec -it $(docker compose ps -q jupyterlab) bash
+   ```
 
 ### Project Structure
 
@@ -207,20 +231,40 @@ jupyter/
   - User: `postgres`
   - Password: `password` (change in production)
 
-### Management Commands
+### Development Workflow
 
+#### VS Code Dev Container Users
+- **Terminal**: Use VS Code's integrated terminal (automatically inside container as `jovyan` user)
+- **Python Scripts**: Run directly from terminal: `python asr_leaderboard.py`
+- **Jupyter Notebooks**: Create in `notebooks/` directory, accessible via VS Code or browser
+- **File Editing**: Full VS Code experience with extensions and IntelliSense
+
+#### Docker Compose Users
 ```bash
+# Access container shell
+docker compose exec jupyterlab bash
+
+# Run Python scripts inside container
+docker exec -it $(docker compose ps -q jupyterlab) python /home/jovyan/workspaces/asr_leaderboard.py
+
 # View logs
 docker compose logs -f
 
 # Stop services
 docker compose down
 
-# Shell into JupyterLab container
-docker compose exec jupyterlab bash
-
 # Restart services
 docker compose restart
+```
+
+#### Common Commands (Both Methods)
+```bash
+# Inside container (as jovyan user):
+whoami                    # Should show: jovyan
+pwd                      # Should show: /home/jovyan/workspaces
+python asr_leaderboard.py # Run ASR evaluation
+python run_tests.py      # Run test suite
+jupyter lab --ip=0.0.0.0 # Start JupyterLab (if not running)
 ```
 
 ### Git Integration
@@ -231,14 +275,27 @@ Notebooks created in the `notebooks/` directory are automatically available on y
 
 ### Running the Leaderboard System
 
+#### VS Code Dev Container Method
+1. **Open project in VS Code Dev Container** (see setup above)
+2. **Use integrated terminal** to run commands directly:
+   ```bash
+   python asr_leaderboard.py
+   ```
+
+#### Docker Compose Method
 1. **Start the development environment**:
    ```bash
    ./start.sh
    ```
 
-2. **Run ASR model evaluation** (inside Docker container):
+2. **Run ASR model evaluation**:
    ```bash
-   docker exec -it jupyter-jupyterlab-1 python /home/jovyan/workspaces/asr_leaderboard.py
+   # Method 1: Exec into container
+   docker compose exec jupyterlab bash
+   python asr_leaderboard.py
+   
+   # Method 2: Direct execution
+   docker exec -it $(docker compose ps -q jupyterlab) python /home/jovyan/workspaces/asr_leaderboard.py
    ```
 
 3. **View results**:
@@ -248,12 +305,21 @@ Notebooks created in the `notebooks/` directory are automatically available on y
 
 ### Testing Individual Models
 
+#### VS Code Dev Container
 ```bash
-# Test OLMoASR adapter
-docker exec -it jupyter-jupyterlab-1 python /home/jovyan/workspaces/test_olmoasr.py
+# In VS Code integrated terminal:
+python test_olmoasr.py      # Test OLMoASR adapter
+python run_tests.py         # Run comprehensive test suite
+```
 
-# Run comprehensive test suite
-docker exec -it jupyter-jupyterlab-1 python /home/jovyan/workspaces/run_tests.py
+#### Docker Compose
+```bash
+# Access container shell first
+docker compose exec jupyterlab bash
+
+# Then run tests
+python test_olmoasr.py      # Test OLMoASR adapter
+python run_tests.py         # Run comprehensive test suite
 ```
 
 ### Current Evaluation Dataset

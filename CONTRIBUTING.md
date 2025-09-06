@@ -134,6 +134,55 @@ def remove_emojis(text: str) -> str:
     return emoji_pattern.sub(r'', text)
 ```
 
+## Development Workflow
+
+### Getting Started
+
+1. **Setup Development Environment**:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your API keys
+   ```
+
+2. **Choose Your Development Method**:
+
+   **Option A: VS Code Dev Container (Recommended)**
+   - Avoids conflicts with system packages and ensures reproducibility
+   - Open project in VS Code
+   - Click "Reopen in Container" when prompted
+   - Use integrated terminal for all commands
+
+   **Option B: Docker Compose (Manual)**
+   - Run `./start.sh` to start services
+   - Use `docker compose exec jupyterlab bash` to access container
+   - Requires more manual container management
+
+### Working Inside the Container
+
+Once inside the development environment (as `jovyan` user):
+
+```bash
+# Verify you're in the right place
+whoami                    # Should show: jovyan
+pwd                      # Should show: /home/jovyan/workspaces
+
+# Run ASR evaluation
+python asr_leaderboard.py
+
+# Run tests
+python run_tests.py
+
+# Create Jupyter notebooks
+# Files in notebooks/ directory are git-tracked
+```
+
+### Code Quality Standards
+
+- **No emojis** in code or documentation (organization policy)
+- **Security first** - Talisman will scan all commits
+- **Test your changes** - Run `python run_tests.py` before committing
+- **Follow Python conventions** - Use snake_case, type hints where appropriate
+
 ### Important Security Notes
 
 - **Never commit secrets** - Talisman will block commits containing sensitive information
